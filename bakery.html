@@ -1,0 +1,57 @@
+---
+permalink: 
+layout: nav_ml
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery ML</title>
+  <link rel="stylesheet" href="bakery-style.css"> 
+</head>
+<body>
+
+<div class="container">
+  <form class="signUp">
+    <h3>Bakery ML</h3>
+    <p>Just enter your email address </br>
+and your password for join.
+    </p>
+    <input class="w100" type="email" placeholder="Insert eMail" required autocomplete='off' />
+    <input type="password" placeholder="Insert Password" required />
+    <input type="password" placeholder="Verify Password" required />
+    <button class="form-btn sx log-in" type="button">Log In</button>
+    <button class="form-btn dx" type="submit">Sign Up</button>
+  </form>
+  <form class="signIn">
+    <h3>Welcome</br>Back !</h3>
+    <button class="fb" type="button">Log In With Facebook</button>
+    <p>- or -</p>
+    <input type="email" placeholder="Insert eMail" autocomplete='off' required />
+    <input type="password" placeholder="Insert Password" required />
+    <button class="form-btn sx back" type="button">Back</button>
+    <button class="form-btn dx" type="submit">Log In</button>
+  </form>
+</div>
+
+<!-- JavaScript code -->
+<script>
+  $(".log-in").click(function(){
+    $(".signIn").addClass("active-dx");
+    $(".signUp").addClass("inactive-sx");
+    $(".signUp").removeClass("active-sx");
+    $(".signIn").removeClass("inactive-dx");
+  });
+
+  $(".back").click(function(){
+    $(".signUp").addClass("active-sx");
+    $(".signIn").addClass("inactive-dx");
+    $(".signIn").removeClass("active-dx");
+    $(".signUp").removeClass("inactive-sx");
+  });
+</script>
+
+</body>
+</html>
